@@ -9,29 +9,46 @@
   </head>
   <body>
     <div class="container">
-      <h1>Places You've Been</h1>
-      <form id="testId">
-        <div class="form-group">
-          <label for="place">List a place you've been:</label>
-          <input type="text" name="place" id="place" class="form-control">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Places You've Been</h1>
+          <form id="testId">
+            <div class="form-group">
+              <label for="place">List a place you've been:</label>
+              <input type="text" name="place" id="place" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="year">List the year you went:</label>
+              <input type="text" name="year" id="year" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="landmark">List a landmark in the place you visited</label>
+              <input type="text" name="landmark" id="landmark" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="city">What city was the landmark located in?</label>
+              <input type="text" name="city" id="city" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Submit!</button>
+          </form>
+
+        <div class="returnOutput">
+          <ul>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="year">List the year you went:</label>
-          <input type="text" name="year" id="year" class="form-control">
+      </div><!--end of col 1-->
+      <div class="col-md-6">
+        <div class="trip">
+          <h2></h2>
+          <ul>
+            <li><span class="place"></span></li>
+            <li><span class="year"></span></li>
+            <li><span class="landmark"></span></li>
+            <li><span class="city"></span></li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="landmark">List a landmark in the place you visited</label>
-          <input type="text" name="landmark" id="landmark" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="city">What city was the landmark located in?</label>
-          <input type="text" name="city" id="city" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Submit!</button>
-      </form>
-      <div class="returnOutput">
-        <span class="trueOutput"></span>
-      </div>
+      </div><!--end of col 2-->
+    </div><!--end of row-->
     </div><!--end of container-->
   </body>
 </html>
