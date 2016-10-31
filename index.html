@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Places You've Been</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Places You've Been</h1>
+      <form id="testId">
+        <div class="form-group">
+          <label for="place">List a place you've been:</label>
+          <input type="text" name="place" id="place" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="year">List the year you went:</label>
+          <input type="text" name="year" id="year" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="landmark">List a landmark in the place you visited</label>
+          <input type="text" name="landmark" id="landmark" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="city">What city was the landmark located in?</label>
+          <input type="text" name="city" id="city" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Submit!</button>
+      </form>
+      <div class="returnOutput">
+        <span class="trueOutput"></span>
+      </div>
+    </div><!--end of container-->
+  </body>
+</html>
