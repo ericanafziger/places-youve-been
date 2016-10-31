@@ -9,6 +9,13 @@ placeObject.prototype.placeYear = function (){
   return this.placeInput + " " + this.yearInput;
 }
 
+function resetFields() {
+    $("input#place").val("");
+    $("input#year").val("");
+    $("input#city").val("");
+    $("input#landmark").val("");
+}
+
 $(document).ready(function(){
   $("form#testId").submit(function(event){
     event.preventDefault();
@@ -18,15 +25,15 @@ $(document).ready(function(){
     var landmarkInput = $("input#landmark").val();
     var cityInput = $("input#city").val();
     var place = new placeObject(placeInput, yearInput, landmarkInput, cityInput);
-    $(".returnOutput ul").append("<li class='clickable'>" + place.placeYear() + "</li>");
+    $("ul#triplist").append("<li><span class='clickable'>" + place.placeYear() + "</span></li>");
 
-    $(".returnOutput").last().click(function(){
+    $(".clickable").last().click(function(){
       $(".trip").show();
       $(".trip h2").text(place.placeYear());
-      $(".place").text(placeInput);
-      $(".year").text(yearInput);
-      $(".landmark").text(landmarkInput);
-      $(".city").text(cityInput);
+      $(".place").text(place.placeInput);
+      $(".year").text(year.yearInput);
+      $(".landmark").text(landmark.landmarkInput);
+      $(".city").text(city.cityInput);
 
     });
     resetFields();
